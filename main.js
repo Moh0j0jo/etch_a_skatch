@@ -1,5 +1,5 @@
 let color = "black";
-let click = true;
+let click = false;
 
 function populateBoard(size) {
 
@@ -20,14 +20,14 @@ function populateBoard(size) {
     }
 }
 
-populateBoard(16);
+populateBoard(32);
 
 function changeSize(input) {
     if (input >= 2 && input <= 100) {
         document.querySelector('.error').style.display = 'none';
         populateBoard(input);
     } else {
-        document.querySelector('.error').style.display = 'Input must be between 2 and 100!';
+        document.querySelector('.error').style.display = 'flex';
     }
 }
 function colorSquare() {
